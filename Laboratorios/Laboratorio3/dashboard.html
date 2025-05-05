@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Sistema de Gestión de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Gestión de Usuarios</h1>
+            <div class="user-info">
+                <span id="currentUser"></span>
+                <button id="logoutBtn" class="btn-secondary">Cerrar Sesión</button>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <div class="users-section">
+                <h2>Lista de Usuarios</h2>
+                <table id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Usuario</th>
+                            <th>Email</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersList"></tbody>
+                </table>
+            </div>
+
+            <div class="form-section">
+                <h2 id="formTitle">Agregar Usuario</h2>
+                <form id="userForm">
+                    <input type="hidden" id="userId">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userUsername">Usuario:</label>
+                        <input type="text" id="userUsername" placeholder="Nombre de usuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userPassword">Contraseña:</label>
+                        <input type="password" id="userPassword" placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit" id="saveBtn" class="btn-primary">Guardar Usuario</button>
+                    <button type="button" id="cancelBtn" class="btn-secondary">Cancelar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="user.js"></script>
+    <script src="userControl.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
